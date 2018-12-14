@@ -1,0 +1,214 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath, amsfonts, amssymb, fancyhdr, floatflt, epsfig, graphicx,psfrag}
+\usepackage[latin1]{inputenc}
+
+\usepackage{newtxtext,newtxmath}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+%A4 = 210x297 => 170x257 with 2cm margins
+%=>these are generous ways of implementing this
+\textwidth=16cm
+\textheight=24.5cm
+
+%now adjust TeX margins to generously fit this 
+\topmargin=-0.3in
+\oddsidemargin=0.0cm
+\evensidemargin=0.0cm
+
+\usepackage{hyperref}
+%\hypersetup{
+%    colorlinks=true,
+%    linkcolor=blue,
+%    filecolor=magenta,      
+%    urlcolor=cyan,
+%}
+
+\newcommand{\ds}{{\sf DarkSUSY}}
+
+
+\begin{document}
+\pagestyle{plain}
+
+
+ \vspace*{-1.5cm}
+
+\thispagestyle{empty}
+
+{\begin{center}
+MSc project \\[1ex]
+ {\large \bf  Relic Density of Kaluza-Klein Dark Matter}\\[0.5ex]
+ {\scriptsize \bf Jan Fredik Aasmundtveit}
+\end{center}
+}
+ \vspace*{0.5cm}
+
+\noindent{\bf Introduction}\\[-2ex]
+ 
+ There is firm evidence that dark matter (DM) is about five times as prevalent as ordinary 
+ matter. This is  inferred in various independent ways, such as from rotational  velocity curves in 
+ galaxies, gravitational lensing, velocity distribution of galaxies within galaxy clusters
+ or, most importantly, the cosmic microwave background~\cite{Ade:2013zuv}. While most
+ likely a new elementary particle \cite{Bertone:2010zza}, the nature of DM is still a matter of debate: 
+ no direct or indirect detection experiment has yet reported any uncontroversial DM signal
+beyond the purely gravitational evidence.
+One of the most promising classes of DM candidates are weakly interacting massive particles (WIMPs), appearing in 
+many theories 
+aiming to address unrelated problems in the standard model (SM) of particle physics. WIMPs would be thermally 
+produced from the
+heat bath of SM particles in the early universe, a process which naturally explains the observed DM abundance if 
+those particles have masses and coupling strengths at the electroweak scale.
+An example for such a WIMP DM candidate arises in the context of  universal extra dimensions (UED),
+where the cosmologically observed DM can be associated to the first so-called Kaluza-Klein excitation of the photon
+\cite{Servant:2002aq}.
+
+
+ 
+\vspace*{0.6cm}
+\noindent
+{\bf Scope}\\[-2ex]
+
+The FORTRAN package \ds\ \cite{ds} has been developed to numerically calculate 
+properties of DM, as well as to make 
+detailed predictions for various experiments.
+These can then be compared with real particle and astrophysical measurements in order to test the 
+model. 
+
+The main goal of the MSc project will be to expand upon a UED module to the \ds\ package, by including more processes as well as extending it to non-minimal models. %more details probably
+The focus will be on the (computer-aided) analytical calculation of all relevant annihilation cross sections  
+for these DM candidates. At high temperatures, i.e.~early cosmological times,
+chemical equilibrium with the heat bath is maintained by DM annihilation and the inverse process of DM
+creation from the heat bath. The point at which these processes stop, known
+as chemical freeze-out, then sets the relic density of DM as measured today. 
+
+Implementing more (co-)annihilation processes in \ds and extending the module to non-minimal models, Will make it possible to determine  the 
+parameter space of this model that leads to a DM density in concordance with astronomical observations can be determined with higher precision.
+
+This project is particularly timely because of very recent updates for the theoretical prediction of 
+masses and couplings in this model \cite{Freitas:2017afm}. When implemented in \ds, this thus allows
+to significantly improve on previous analyses of the relic density of Kaluza-Klein DM \cite{KKoh2}. 
+ 
+%\newpage 
+\vspace*{0.6cm}
+\noindent
+{\bf Project tasks}\\
+{\scriptsize (dates mark deadlines for the completion of the respective task)}\\[-3ex]
+
+\begin{itemize}
+\item Familiarize with the standard way of calculating the relic density, including co-annihilations,
+as well as with the basic construction of the model of universal extra dimensions {\scriptsize \bf [\emph{July 2019}]}
+
+\item Get an overview of the work done on the module, as well as which missing processes are most significant. Familiarize with mathematica and the FeynCalc package to calculate 
+tree-level cross sections for $2\to2$ processes.  {\scriptsize \bf [\emph{August 2019}]}
+
+\item Calculation of as many (co-)annihilation cross sections as possible within the deadline, 
+in the stated order of priority {\scriptsize \bf [\emph{September 2019}]}
+
+\item Familiarization with programming in FORTRAN, as well as with \ds and the existing UED module. Devise method for how to
+best expand the UED model to non-minimal scenarios{\scriptsize \bf [\emph{October 2019}]}
+
+\item Implement {\it and test}, by comparison of the relic density with previous literature, the processes
+calculated until now. 
+ {\scriptsize \bf [\emph{November 2019}]}
+
+\item Prepare a short written report of results obtained so far, including the theoretical tools necessary 
+to derive them. {\scriptsize \bf [\emph{December 2019}]}
+\item Continue to implement missing processes in \ds. {\scriptsize \bf [\emph{February 2020}]}
+\item Study parameter ranges that result in correct relic density {\scriptsize \bf [\emph{March 2020}]}
+\item Fully focus on thesis writing {\scriptsize \bf [\emph{from 15 March 2020}]}
+\end{itemize}
+
+
+% \vspace*{0.3cm}
+%\noindent
+%{\bf Methods}
+% \vspace*{0.1cm}
+
+%The first part  of the project largely consists in literature research and the compilation of a 
+%short written report. The following steps then require mostly analytical calculations, 
+%but likely numerical evaluations of the final results (both to be done with the  {\sf mathematica} package).
+
+ \vspace*{0.5cm}
+{
+\footnotesize
+\noindent
+{\bf References}
+
+%\renewcommand{\refname}{\footnotesize{References}}
+\renewcommand{\refname}{\vspace*{-0.6cm}}
+
+\begin{thebibliography}{99}
+\vspace*{-1cm}
+
+\bibitem{Ade:2013zuv} 
+  P.~A.~R.~Ade {\it et al.} [Planck Collaboration],
+  %``Planck 2013 results. XVI. Cosmological parameters,''
+  Astron.\ Astrophys.\  {\bf 571}, A16 (2014)
+  [arXiv:1303.5076].
+  %%CITATION = ARXIV:1303.5076;%%
+  %4038 citations counted in INSPIRE as of 15 Nov 2015
+\vspace*{-0.2cm}
+  
+\bibitem{Bertone:2010zza} 
+  G.~Bertone {\it et al.},
+  %``Particle Dark Matter: Observations, Models and Searches,''
+  Cambridge, UK: Univ. Pr. (2010) 738 p
+\vspace*{-0.2cm}
+
+\bibitem{Servant:2002aq} 
+  G.~Servant and T.~M.~P.~Tait,
+  %``Is the lightest Kaluza-Klein particle a viable dark matter candidate?,''
+  Nucl.\ Phys.\ B {\bf 650}, 391 (2003)
+%  doi:10.1016/S0550-3213(02)01012-X
+  [hep-ph/0206071].
+\vspace*{-0.2cm}
+
+
+\bibitem{ds}
+\href{http://www.darksusy.org/}{http://www.darksusy.org/}
+\vspace*{-0.2cm}
+
+\bibitem{dsnew}
+T.~Bringmann, J.~Edsj\"o, P.~Gondolo, P.~Ullio and L.~Bergstr\"om, 
+{DarkSUSY 6.0}, \emph{in prep.} (2016).
+\vspace*{-0.2cm}
+
+
+\bibitem{Freitas:2017afm} 
+  A.~Freitas, K.~Kong and D.~Wiegand,
+  %``Radiative corrections to masses and couplings in Universal Extra Dimensions,''
+  arXiv:1711.07526 [hep-ph].
+\vspace*{-0.2cm}
+
+\bibitem{KKoh2}
+  M.~Kakizaki, S.~Matsumoto and M.~Senami,
+  %``Relic abundance of dark matter in the minimal universal extra dimension model,''
+  Phys.\ Rev.\ D {\bf 74}, 023504 (2006)
+%  doi:10.1103/PhysRevD.74.023504
+  [hep-ph/0605280];
+  M.~Kakizaki, S.~Matsumoto, Y.~Sato and M.~Senami,
+  %``Significant effects of second KK particles on LKP dark matter physics,''
+  Phys.\ Rev.\ D {\bf 71}, 123522 (2005)
+%  doi:10.1103/PhysRevD.71.123522
+  [hep-ph/0502059];
+  M.~Kakizaki, S.~Matsumoto, Y.~Sato and M.~Senami,
+  %``Relic abundance of LKP dark matter in UED model including effects of second KK resonances,''
+  Nucl.\ Phys.\ B {\bf 735}, 84 (2006)
+%  doi:10.1016/j.nuclphysb.2005.11.022
+  [hep-ph/0508283].
+\vspace*{-0.2cm}
+
+
+\bibitem{gg} 
+  P.~Gondolo and G.~Gelmini,
+  %``Cosmic abundances of stable particles: Improved analysis,''
+  Nucl.\ Phys.\ B {\bf 360}, 145 (1991).
+%  doi:10.1016/0550-3213(91)90438-4
+\vspace*{-0.2cm}
+
+
+
+\end{thebibliography}
+
+
+\end{document}
